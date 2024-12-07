@@ -52,19 +52,45 @@ nav button:hover{
     flex-direction: column;
     gap: 2vh;
 }
+.content > *{
+    box-shadow: 1vw 1vw 1vw #892be227;
 
+} 
 .create_post{
     background-color:#892be265;
-    padding: 1vw;
     border-radius: 1vw;
     display: flex;
     flex-direction: column;
     gap: 1vh;
+    width: 25vw;
+    overflow: hidden;
+}
+.create_post h1{
+    color: blueviolet;
+    background-color: aliceblue;
+    padding: 1vw;
+    padding-left: 0;
+    text-align: left;
+
+}
+.author_inp{
+    padding: .5vw;
+    padding-left: 1vw;
+
+    border-radius: .5vw;
+    border: none;
+    background-color: aliceblue;
+    margin: 1vw 1vw 1vw 0vw;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .new_post{
     background-color: aliceblue;
     padding: 1vw;
     border-radius: .5vw;
+    margin: 1vw 1vw 1vw 0vw;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
 }
 .create_post button{
     margin-left: auto;
@@ -72,17 +98,23 @@ nav button:hover{
     background-color: blueviolet;
     color: aliceblue;
     font-weight: bold;
-    border-radius: .5vw;
     border: none;
     cursor: pointer;
+    width: 100%;
+}
+.create_post button:hover{
+    background-color: aliceblue;
+    color: blueviolet;
 }
 .all_posts{
-    /* background-color: red; */
-    padding: 1vw;
     display: flex;
     flex-direction: column;
     gap: 2vh;
     border-radius: 1vw;
+}
+.all_posts > h1{
+    text-align: center;
+    color: blueviolet;
 }
 .comments{
     display: flex;
@@ -91,6 +123,8 @@ nav button:hover{
     padding: 1vw;
     flex-wrap: wrap;
     border-radius: 1vw;
+    width: 95vw;
+    margin: auto;
 }
 .comment{
     padding: 1vw;
