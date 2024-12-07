@@ -6,7 +6,7 @@ export default function HomePage() {
     const [comments, setComments] = useState([])
     const [comment_added, setComment_added] = useState(false)
     useEffect(()=>{
-        fetch('http://localhost:2025/all_posts')
+        fetch('https://saharalink-production.up.railway.app/all_posts')
         .then((res)=>res.json())
         .then((data)=>{setComments(data)})
     },[comment_added])

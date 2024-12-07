@@ -6,7 +6,7 @@ export default function CreatePost({comment_added}) {
     async function create_comment() {
         const author = author_ref.current.value
         const text = text_ref.current.textContent
-        const request = await fetch('http://localhost:2025/new_post', {
+        const request = await fetch('https://saharalink-production.up.railway.app/new_post', {
             method: "POST",
             headers: {
                 "Content-Type" : "application/json"
