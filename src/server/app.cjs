@@ -3,9 +3,12 @@ const app = express()
 const db = require('./db.cjs')
 
 const cors = require('cors')
+const path = require('path');
 
 app.use(express.json())
 app.use(cors())
+
+app.use(express.static(path.join(__dirname, '..', '..', 'dist')));
 
 
 app.get('/all_posts', async(req, res)=>{
@@ -17,6 +20,9 @@ app.post('/new_post', async(req, res)=>{
     await db.query('insert into posts(author, text) values($1, $2)', [author, text])    
     res.send('asd')
 })
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', '..', 'dist', 'index.html'));
+});
 
 
 app.listen(2025, ()=>{
